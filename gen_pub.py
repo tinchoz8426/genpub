@@ -2,7 +2,7 @@ import streamlit as st
 from groq import Groq
 
 # Inicializar Groq con la clave del entorno
-groq = Groq(api_key=API_KEY_GROQ)
+groq = Groq(api_key=st.secrets["API_KEY_GROQ"])
 
 def generate_creative_post(texto_entrada):
     """Genera una publicación creativa basada en el texto de entrada"""
