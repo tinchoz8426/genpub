@@ -7,7 +7,7 @@ groq = Groq(api_key=st.secrets["API_KEY_GROQ"])
 def generate_creative_post(texto_entrada):
     """Genera una publicación creativa basada en el texto de entrada"""
     response = groq.chat.completions.create(
-        model="mixtral-8x7b-32768",
+        model="gemma2-9b-it",
         messages=[
             {"role": "system", "content": "Eres un experto en marketing digital y creación de contenido social. Tu tarea es convertir el texto proporcionado en una publicación creativa y atractiva para redes sociales."},
             {"role": "user", "content": f"Texto de entrada: {texto_entrada}\nCrea una publicación que incluya emojis, hashtags relevantes y un tono atractivo para engagement."}
